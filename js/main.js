@@ -2,7 +2,7 @@
 console.log("loaded: main.js")
 
 let attempts = 0; // Zit poging 0
-let playerScore = 10; // Zit speler score 0
+let playerScore = 10; // Zit speler score 10
 let speler = null; // Zit Speler null (de naam is nog niet ingesteld)
 let gameStarted = false; // Zit gameStarted false (de spel is nog niet begonnen)
 let randomNumber = Math.floor(Math.random() * 25) + 1; // genereert een random nummer tussen de 1 en 25
@@ -94,3 +94,10 @@ function guess(){
     }
 
 }
+
+
+// add event listener to start button
+document.querySelector('#startButton').addEventListener('click', startGame);
+
+// add event listener to guess button
+document.querySelector('#guess').addEventListener('click', guess);
